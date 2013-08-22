@@ -1,5 +1,5 @@
 var AppView = Backbone.View.extend({
-  el: $("#contact-book"),
+  el: "#contact-book",
 
   events: {
     "click #new-contact": "newContact",

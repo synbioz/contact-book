@@ -1,5 +1,5 @@
 var ContactListView = Backbone.View.extend({
-  el: $("#contact-list"),
+  el: "#contact-list",
 
   initialize: function(collection) {
     this.collection = collection;
