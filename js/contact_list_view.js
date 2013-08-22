@@ -25,10 +25,8 @@ var ContactListView = Backbone.View.extend({
   },
 
   addAll: function() {
-    this.collection.each(function(contact) {
-      if (contact.matches(this.filterExpr)) {
-        this.addOne(contact);
-      }
+    _.each(this.collection.filtered(this.filterExpr), function(contact) {
+      this.addOne(contact)
     }, this);
   },
 
