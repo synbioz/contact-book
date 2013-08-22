@@ -33,8 +33,8 @@ var AppView = Backbone.View.extend({
   },
 
   filterContacts: function(ev) {
-    var elem = $(ev.currentTarget);
+    var $elem = $(ev.currentTarget);
 
-    this.contactList.filter(elem.val());
+    this.contactList.filter($elem.val());
   }
 });

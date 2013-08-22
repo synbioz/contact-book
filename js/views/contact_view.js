@@ -21,11 +21,11 @@ var ContactView = Backbone.View.extend({
   },
 
   update: function(ev) {
-    var elem      = $(ev.target),
-        attribute = elem.attr('class').replace('contact-', ''),
+    var $elem      = $(ev.target),
+        attribute = $elem.attr('class').replace('contact-', ''),
         update    = {};
 
-    update[attribute] = elem.val();
+    update[attribute] = $elem.val();
 
     this.model.save(update);
   },
