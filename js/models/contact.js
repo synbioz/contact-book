@@ -32,13 +32,11 @@ var Contact = Backbone.Model.extend({
   },
 
   asMatchable: function() {
-    var matchable = [
+    return [
       this.get('firstName'),
       this.get('lastName'),
       this.get('email'),
       this.get('phone'),
     ];
-
-    return matchable;
   }
 });
