@@ -37,6 +37,7 @@ app.ContactListView = Backbone.View.extend({
   },
 
   filter: function(text) {
+    app.Router.navigate('contacts/search/' + encodeURIComponent(text));
     if (text.length != 0) {
       this.filterExpr = new RegExp(text, "i");
     } else {

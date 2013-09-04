@@ -60,6 +60,7 @@
   <script src="js/views/item_view.js" charset="utf-8"></script>
   <script src="js/views/contact_view.js" charset="utf-8"></script>
   <script src="js/views/app_view.js" charset="utf-8"></script>
+  <script src="js/routers/application_router.js" charset="utf-8"></script>
 
   <script charset="utf-8">
     /* <![CDATA[ */
@@ -67,7 +68,10 @@
 
     $(function() {
       app.Contacts = new app.ContactBook();
-      app.App = new app.AppView(app.Contacts);
+      app.MainView = new app.AppView(app.Contacts);
+      app.Router   = new app.ApplicationRouter();
+
+      Backbone.history.start();
     });
     /* ]]> */
   </script>

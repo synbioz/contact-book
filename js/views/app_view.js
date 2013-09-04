@@ -26,6 +26,8 @@ app.AppView = Backbone.View.extend({
   },
 
   showContact: function(contact) {
+    app.Router.navigate('contacts/' + contact.id);
+
     var view = new app.ContactView({model: contact});
     this.$("#contact-details").html(view.render().el);
 
