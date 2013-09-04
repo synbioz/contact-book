@@ -2,8 +2,8 @@ var app = app || {};
 
 app.ApplicationRouter = Backbone.Router.extend({
   routes: {
-    "contacts/search/:pattern": "filterContact",
     "contacts/:id":             "showContact",
+    "contacts/search/:pattern": "filterContact",
   },
 
   showContact: function(id) {
