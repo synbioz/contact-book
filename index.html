@@ -63,10 +63,11 @@
 
   <script charset="utf-8">
     /* <![CDATA[ */
-    var cb = {};
+    var app = app || {};
+
     $(function() {
-      cb.Contacts = new ContactBook();
-      cb.App = new AppView(cb.Contacts);
+      app.Contacts = new app.ContactBook();
+      app.App = new app.AppView(app.Contacts);
     });
     /* ]]> */
   </script>

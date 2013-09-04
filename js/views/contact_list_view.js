@@ -1,4 +1,6 @@
-var ContactListView = Backbone.View.extend({
+var app = app || {};
+
+app.ContactListView = Backbone.View.extend({
   el: "#contact-list",
 
   initialize: function(collection) {
@@ -18,7 +20,7 @@ var ContactListView = Backbone.View.extend({
   },
 
   addOne: function(contact) {
-    var item = new ItemView({model: contact});
+    var item = new app.ItemView({model: contact});
     this.listenTo(item, 'select', this.selectContact);
 
     this.$el.append(item.render().el);

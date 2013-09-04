@@ -1,5 +1,7 @@
-var ContactBook = Backbone.Collection.extend({
-  model: Contact,
+var app = app || {};
+
+app.ContactBook = Backbone.Collection.extend({
+  model: app.Contact,
 
   localStorage: new Backbone.LocalStorage('contact-book'),
 

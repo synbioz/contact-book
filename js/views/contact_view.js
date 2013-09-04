@@ -1,4 +1,6 @@
-var ContactView = Backbone.View.extend({
+var app = app || {};
+
+app.ContactView = Backbone.View.extend({
   tagName: 'div',
 
   className: 'contact',

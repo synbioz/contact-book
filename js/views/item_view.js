@@ -1,4 +1,6 @@
-var ItemView = Backbone.View.extend({
+var app = app || {};
+
+app.ItemView = Backbone.View.extend({
   events: {
     "click": "select"
   },

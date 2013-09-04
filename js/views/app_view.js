@@ -1,4 +1,6 @@
-var AppView = Backbone.View.extend({
+var app = app || {};
+
+app.AppView = Backbone.View.extend({
   el: "#contact-book",
 
   events: {
@@ -8,7 +10,7 @@ var AppView = Backbone.View.extend({
 
   initialize: function(collection) {
     this.collection  = collection;
-    this.contactList = new ContactListView(collection);
+    this.contactList = new app.ContactListView(collection);
 
     this.listenTo(this.contactList, 'select', this.selectContact);
   },
@@ -24,7 +26,7 @@ var AppView = Backbone.View.extend({
   },
 
   showContact: function(contact) {
-    var view = new ContactView({model: contact});
+    var view = new app.ContactView({model: contact});
     this.$("#contact-details").html(view.render().el);
 
     var input = view.$(".contact-firstName").get(0);

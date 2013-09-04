@@ -1,4 +1,6 @@
-var Contact = Backbone.Model.extend({
+var app = app || {};
+
+app.Contact = Backbone.Model.extend({
   defaults: {
     firstName: "",
     lastName:  "",
